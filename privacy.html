@@ -10,45 +10,80 @@
   h1 { font-size: 30px; margin: 0 0 4px; }
   h2 { font-size: 19px; margin: 34px 0 6px; }
   .date { color: #5b6675; margin: 0 0 28px; }
+  table { border-collapse: collapse; width: 100%; margin: 10px 0 18px; font-size: 16px; }
+  th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid #d9dde3; }
+  th { font-weight: 600; }
   a { color: #1a5fb4; }
-  @media (prefers-color-scheme: dark) { body { background: #12161c; color: #e6e9ee; } .date { color: #9aa5b4; } a { color: #8ab4f8; } }
+  @media (prefers-color-scheme: dark) { body { background: #12161c; color: #e6e9ee; } .date { color: #9aa5b4; } a { color: #8ab4f8; } th, td { border-color: #2c333d; } }
 </style>
 </head>
 <body>
 <main>
 <h1>Pawn Boss — Privacy Policy</h1>
-<p class="date">Effective October 31, 2026 (first published October 7, 2026)</p>
+<p class="date">Effective November 2, 2026 (first published October 7, 2026)</p>
 
-<p>Pawn Boss is a single-player game for Meta Quest, published by Magnet Mates LLC ("we"). This policy explains what the game does with information. The short version: we do not collect, store, or sell any personal information. The only data the game touches outside your headset is handled by Meta's own platform, for achievements and leaderboards, as described below.</p>
+<p>Pawn Boss is a single-player game for Meta Quest, published by Magnet Mates LLC ("we", "us"). This policy explains what data the game collects, processes and stores about you, what it is used for, and how to have it deleted.</p>
 
-<h2>What we collect</h2>
-<p>Nothing on our side. The game has no accounts of its own, no sign-up, no analytics, no advertising, and no tracking. We have no servers. We do not receive your name, email address, Meta account details, location, voice, camera images, hand or body tracking data, or anything about how you play.</p>
+<h2>Summary</h2>
+<p>The game collects and processes two kinds of data from your Meta account, through Meta's Platform SDK: your <strong>Meta user ID</strong> and your <strong>Meta user profile</strong> (your username, display name and profile picture). They are used only to verify your purchase, record your achievements, and show your name on the game's optional World Rankings leaderboards. We do not sell this data, use it for advertising, or share it with anyone other than Meta. Everything else the game stores stays on your headset.</p>
 
-<h2>What stays on your headset</h2>
-<p>Your saved games, settings, and a short technical log used for troubleshooting are stored in the game's own storage on your headset. They are not sent to us or to anyone else, and they are deleted when you uninstall the game.</p>
+<h2>Data we collect and process, and why</h2>
+<table>
+  <tr><th>Data</th><th>Where it comes from</th><th>What it is used for</th><th>Where it is stored</th></tr>
+  <tr>
+    <td>Meta user ID</td>
+    <td>Meta Platform SDK (User ID feature)</td>
+    <td>Confirming the game was purchased on the account in use (entitlement check); identifying your achievements and leaderboard scores so they belong to your account and survive a reinstall.</td>
+    <td>Held in the game's memory while you play. Sent to Meta's achievement and leaderboard services, where Meta stores it. Not sent to us.</td>
+  </tr>
+  <tr>
+    <td>Meta user profile: username, display name, profile picture</td>
+    <td>Meta Platform SDK (User Profile feature)</td>
+    <td>Showing your name and picture next to your score on the in-game World Rankings board, and showing other players' names and scores on the same board. Not used for anything else.</td>
+    <td>Held in the game's memory while you play. The in-game board shows it; the game does not keep a copy after you quit. Not sent to us.</td>
+  </tr>
+  <tr>
+    <td>Achievement unlocks</td>
+    <td>Created by the game when you reach a milestone (for example your first sale, or buying the building)</td>
+    <td>Recording the milestone against your Meta account so it appears on your Meta profile and in the Meta Horizon app.</td>
+    <td>Meta's achievement service, under your Meta user ID.</td>
+  </tr>
+  <tr>
+    <td>Leaderboard scores (best day, biggest find, weekly profit)</td>
+    <td>Created by the game from your in-game shop's results</td>
+    <td>Ranking your shop against other players on the World Rankings board. The board is optional: if you never open it, no score is submitted.</td>
+    <td>Meta's leaderboard service, under your Meta user ID.</td>
+  </tr>
+</table>
+<p>The game sends this data only to Meta, using Meta's own SDK, over Meta's connection. We have no servers of our own, no accounts of our own, no analytics, no advertising and no tracking, and we do not receive a copy of any of the data above. We do not collect your email address, location, voice, camera images, or hand or body tracking data.</p>
+
+<h2>Data that stays on your headset</h2>
+<p>Your saved games, your settings and a short technical log used for troubleshooting are stored in the game's own storage on your headset. They are never sent to us or to anyone else, and they are deleted when you uninstall the game.</p>
 <p>If you press PHOTO in the game, a picture of your in-game medallion board is saved to your headset's Pictures folder ("Pictures/Pawn Boss"). It stays on your device, and you can delete it at any time from the headset's Files app.</p>
 <p>Hand tracking and controller tracking are used only to let you play. That data is processed on the headset by the Meta Quest system and is never stored or transmitted by the game.</p>
 
-<h2>Meta platform services</h2>
-<p>The game uses Meta's Platform SDK for three things. All of them are carried out by Meta on Meta's systems; we do not run any servers and do not receive copies of this data.</p>
+<h2>How long data is kept</h2>
+<p>Your user ID and profile are held by the game only while it is running. Achievements and leaderboard scores are kept by Meta until you or Meta delete them (see below). Data on your headset is kept until you delete it or uninstall the game.</p>
+
+<h2>How to delete your data</h2>
+<p>You can request deletion of any data the game has created about you in either of these ways:</p>
 <ul>
-  <li><strong>Purchase check.</strong> When the game starts, it confirms that the game was purchased on the account in use.</li>
-  <li><strong>Achievements.</strong> When you reach an in-game milestone (for example, your first sale or buying the building), the game tells Meta to record that achievement against your Meta account, using your Meta user ID, so it persists if you reinstall and can appear on your Meta profile. Meta stores and displays achievements under Meta's own privacy policy.</li>
-  <li><strong>World Rankings leaderboards (when enabled).</strong> The game may submit your shop's scores (best day, biggest find, weekly profit) to Meta's leaderboard service under your Meta user ID, and the in-game rankings board may show your Meta username and profile photo next to your score, along with other players' usernames and scores as Meta provides them. Scores are stored by Meta, not by us.</li>
+  <li><strong>Email us.</strong> Send a request to <a href="mailto:hello@magnetmates.app?subject=Pawn%20Boss%20data%20deletion">hello@magnetmates.app</a> with the subject "Pawn Boss data deletion" and the Meta username you play under. We will confirm within 7 days, ask Meta to remove your Pawn Boss achievements and leaderboard entries, and finish within 30 days. We will also delete any copy of your request once it is done.</li>
+  <li><strong>Through Meta.</strong> Because achievements and leaderboard scores are stored by Meta, you can also manage or remove them using the Meta Horizon app or Meta's account tools, including by deleting the app's data or your Meta account. Meta's handling of your data is described in <a href="https://www.meta.com/legal/privacy-policy/">Meta's privacy policy</a>.</li>
 </ul>
-<p>To see or remove achievement and leaderboard data, use the Meta Horizon app or Meta's account tools, since that data lives with Meta. You can also stop the game from writing any of it by uninstalling the game. Meta's own handling of your data when you use a Quest headset and the Meta Horizon Store is described in <a href="https://www.meta.com/legal/privacy-policy/">Meta's privacy policies</a>.</p>
+<p>Uninstalling the game deletes everything it stored on your headset. It does not by itself delete achievements or scores held by Meta; use one of the two options above for those.</p>
 
 <h2>Children</h2>
-<p>The game does not collect information from anyone, including children. Achievements and leaderboards are provided by Meta under the account rules Meta applies to that account.</p>
+<p>Pawn Boss is not directed at children under 13. The game does not knowingly collect data from children, and the Meta account features it uses are provided by Meta under the age rules Meta applies to that account. If you believe a child's data has been recorded through the game, email us and we will delete it.</p>
 
-<h2>Deletion</h2>
-<p>Because we hold nothing, there is nothing for us to delete: uninstalling the game removes everything it stored on your headset, and achievement or leaderboard data is managed through your Meta account. If you believe we hold any information about you, email us and we will confirm and delete it.</p>
+<h2>Sharing</h2>
+<p>We share no data with anyone. The only party that receives data from the game is Meta, through its own platform, as described above. We do not sell data and we do not use it for advertising.</p>
 
 <h2>Changes</h2>
-<p>If a future update adds another online feature, this policy will be updated before that feature is released, and the game will describe the feature before you use it.</p>
+<p>If a future update adds another online feature or collects anything new, this policy will be updated before that feature is released, and the game will describe the feature before you use it.</p>
 
 <h2>Contact</h2>
-<p>Questions about this policy: <a href="mailto:hello@magnetmates.app">hello@magnetmates.app</a></p>
+<p>Questions or requests about this policy: <a href="mailto:hello@magnetmates.app">hello@magnetmates.app</a></p>
 <p>Magnet Mates LLC, North Carolina, USA</p>
 </main>
 </body>
