@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Matt Arnold · Magnet Mates</title>
+<meta name="description" content="Matt Arnold of Magnet Mates LLC in Charlotte, North Carolina. Software for small businesses, built with AI tools: an online store, seven apps on the App Store and a game on Meta Quest.">
+<meta property="og:title" content="Matt Arnold · Magnet Mates">
+<meta property="og:description" content="Software for small businesses, built with AI tools. Charlotte, North Carolina.">
+<link rel="icon" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;700;900&family=Libre+Franklin:wght@400;500;600&family=Courier+Prime:wght@400;700&display=swap">
+<style>
+/* Layout: the same shop wall as the home page. A plain introduction, one small-business job told start to finish, the shipped list, the trades Matt has worked in, how a first visit goes, and a ticket for contact. */
+:root {
+  --wall: #10161f;
+  --wall-2: #172130;
+  --ink: #ece6da;
+  --ink-2: #a9a291;
+  --brass: #d9a54a;
+  --brass-hi: #f3d491;
+  --ticket: #efe4c8;
+  --ticket-ink: #2a2116;
+  --rule: #2a3445;
+  --display: "Roboto Slab", Rockwell, Georgia, serif;
+  --body: "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: "Courier Prime", "Courier New", monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { background: var(--wall); }
+body {
+  margin: 0; background: var(--wall); color: var(--ink);
+  font: 17px/1.6 var(--body);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--brass-hi); }
+a:focus-visible { outline: 2px solid var(--brass-hi); outline-offset: 3px; }
+img { max-width: 100%; height: auto; display: block; }
+.wrap {
+  max-width: 1120px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; }
+h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 900; line-height: 1.12; }
+h3 { font-size: 20px; font-weight: 700; line-height: 1.25; }
+.eyebrow {
+  font: 600 13px/1.4 var(--body); letter-spacing: .16em; text-transform: uppercase;
+  color: var(--brass);
+}
+p { margin: 0; }
+
+/* top bar: the way back to the game */
+.bar { border-bottom: 1px solid var(--rule); }
+.bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; }
+.bar img { width: 132px; }
+.bar a.back { font: 400 15px/1 var(--mono); color: var(--ink-2); text-decoration: none; }
+.bar a.back:hover { color: var(--brass-hi); }
+
+/* introduction */
+.intro .wrap { padding-block: clamp(48px, 8vw, 96px) clamp(40px, 6vw, 72px); }
+.intro-copy { max-width: 720px; display: grid; gap: 20px; }
+.intro h1 { font-size: clamp(44px, 7vw, 76px); font-weight: 900; line-height: 1.02; letter-spacing: -.01em; }
+.lead { font: 500 clamp(20px, 2.4vw, 25px)/1.4 var(--display); color: var(--ink); }
+.intro p.more { color: var(--ink-2); max-width: 62ch; }
+.tally { list-style: none; margin: clamp(32px, 5vw, 56px) 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.tally li { padding: 20px 18px 22px; border-left: 1px solid var(--rule); display: grid; gap: 6px; min-width: 0; }
+.tally li:first-child { border-left: 0; padding-left: 0; }
+.tally b { font: 900 clamp(34px, 5vw, 52px)/1 var(--display); color: var(--brass-hi); }
+.tally span { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+@media (max-width: 620px) {
+  .tally { grid-template-columns: minmax(0, 1fr); }
+  .tally li { border-left: 0; padding-left: 0; border-top: 1px solid var(--rule); grid-template-columns: 64px minmax(0, 1fr); align-items: baseline; gap: 12px; }
+  .tally li:first-child { border-top: 0; }
+}
+
+section { padding-block: clamp(56px, 8vw, 104px); }
+.head { display: grid; gap: 12px; margin-bottom: 36px; max-width: 680px; }
+.head p { color: var(--ink-2); }
+
+/* the job: problem, build, result */
+.job { background: var(--wall-2); }
+.parts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--rule); }
+.parts > div { padding: 24px 24px 8px 0; display: grid; gap: 10px; align-content: start; min-width: 0; }
+.parts > div + div { padding-left: 24px; border-left: 1px solid var(--rule); }
+.parts .k { font: 700 13px/1 var(--mono); color: var(--brass); letter-spacing: .06em; text-transform: uppercase; }
+.parts p { color: var(--ink-2); font-size: 16px; }
+.parts p strong { color: var(--ink); font-weight: 600; }
+@media (max-width: 820px) {
+  .parts { grid-template-columns: minmax(0, 1fr); }
+  .parts > div, .parts > div + div { padding: 22px 0; border-left: 0; border-bottom: 1px solid var(--rule); }
+}
+.links { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 10px 28px; font: 400 15px/1.4 var(--mono); }
+
+/* shipped */
+.shelf { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
+.shelf li { border-bottom: 1px solid var(--rule); }
+.shelf a {
+  display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.3fr) auto; gap: 6px 24px; align-items: baseline;
+  padding: 18px 0; text-decoration: none; color: inherit;
+}
+.shelf a:hover .name { color: var(--brass-hi); }
+.shelf .name { font: 700 19px/1.3 var(--display); color: var(--ink); }
+.shelf .what { color: var(--ink-2); font-size: 16px; }
+.shelf .where { font: 400 14px/1.4 var(--mono); color: var(--brass); white-space: nowrap; }
+@media (max-width: 720px) {
+  .shelf a { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .shelf .where { white-space: normal; }
+}
+
+/* trades */
+.trades { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; border-top: 1px solid var(--rule); }
+.trades li { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 4px 24px; padding: 20px 0; border-bottom: 1px solid var(--rule); }
+.trades h3 { font-size: 18px; }
+.trades p { color: var(--ink-2); max-width: 62ch; }
+@media (max-width: 720px) { .trades li { grid-template-columns: minmax(0, 1fr); } }
+
+/* a first visit: a real sequence */
+.visit { background: var(--wall-2); }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; border-top: 1px solid var(--rule); }
+.steps li { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 4px 20px; padding: 22px 0; border-bottom: 1px solid var(--rule); }
+.steps .n { font: 700 15px/1.5 var(--mono); color: var(--brass); padding-top: 2px; }
+.steps h3 { grid-column: 2; }
+.steps p { grid-column: 2; color: var(--ink-2); max-width: 62ch; }
+
+/* contact ticket */
+.ticket-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 48px; align-items: center; }
+@media (max-width: 820px) { .ticket-row { grid-template-columns: minmax(0, 1fr); gap: 28px; } }
+.ticket {
+  background: var(--ticket); color: var(--ticket-ink); border-radius: 3px;
+  padding: 26px 28px 22px; position: relative;
+  box-shadow: 0 14px 40px rgba(0,0,0,.45);
+  font-family: var(--mono);
+  transform: rotate(-1.2deg);
+}
+.ticket::before, .ticket::after {
+  content: ""; position: absolute; top: 50%; width: 18px; height: 18px; margin-top: -9px;
+  border-radius: 50%; background: var(--wall);
+}
+.ticket::before { left: -9px; } .ticket::after { right: -9px; }
+.ticket a { color: var(--ticket-ink); }
+.t-top { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 14px; letter-spacing: .08em; text-transform: uppercase; }
+.t-title { font: 900 30px/1.1 var(--display); margin: 14px 0 4px; letter-spacing: .01em; }
+.t-sub { font-size: 14px; margin-bottom: 18px; }
+.t-rows { border-top: 2px dashed rgba(42,33,22,.45); padding-top: 10px; display: grid; gap: 0; }
+.t-row { display: grid; grid-template-columns: minmax(0, .7fr) minmax(0, 1.3fr); gap: 16px; padding: 9px 0; border-bottom: 1px dotted rgba(42,33,22,.35); font-size: 16px; }
+.t-row span:last-child { font-weight: 700; text-align: right; overflow-wrap: anywhere; }
+@media (max-width: 520px) {
+  .t-row { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .t-row span:last-child { text-align: left; }
+}
+
+footer { border-top: 1px solid var(--rule); padding-block: 36px 48px; color: var(--ink-2); font-size: 15px; }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 14px 32px; justify-content: space-between; }
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <div class="wrap">
+    <a href="index.html" aria-label="Pawn Boss home"><img src="assets/logo.png" alt="Pawn Boss" width="1400" height="401"></a>
+    <a class="back" href="index.html">Back to the game</a>
+  </div>
+</div>
+
+<header class="intro">
+  <div class="wrap">
+    <div class="intro-copy">
+      <p class="eyebrow">Magnet Mates LLC · Charlotte, North Carolina</p>
+      <h1>Matt Arnold</h1>
+      <p class="lead">I build software for small businesses with AI tools, starting with our own.</p>
+      <p class="more">Magnet Mates is a family business in Charlotte. I'm not a career programmer. I learned to build by directing AI coding tools, mainly Claude Code and Codex, and everything on this page shipped that way. It's the same skill a shop owner can pick up.</p>
+    </div>
+    <ul class="tally">
+      <li><b>7</b><span>apps live on the App Store</span></li>
+      <li><b>1</b><span>game out on the Meta Quest store</span></li>
+      <li><b>1</b><span>online store taking real orders</span></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="job" id="magnet-mates">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">A small business, start to finish</p>
+        <h2>Magnet Mates: photo magnets, pressed by hand, ordered from a phone.</h2>
+      </div>
+      <div class="parts">
+        <div>
+          <span class="k">The problem</span>
+          <p>Every order starts with a customer's photos, and each photo has to be cropped to the exact shape of the magnet before it prints. The business needed a way for customers to do that themselves, pay, and follow their order.</p>
+        </div>
+        <div>
+          <span class="k">What we built</span>
+          <p>An online store plus iPhone and Android apps. Customers pick a style, upload full-quality photos and crop each one before checkout. The original is kept and a high-resolution print crop is made from it. Businesses can send a logo and ask for samples and bulk pricing.</p>
+        </div>
+        <div>
+          <span class="k">What changed</span>
+          <p>Customers place, track and reorder from their phone. <strong>The app is rated 5.0 on the App Store.</strong> It started on a hosted app builder, and when the running costs and security stopped making sense we moved it to our own setup.</p>
+        </div>
+      </div>
+      <p class="links">
+        <a href="https://magnetmates.app" target="_blank" rel="noopener">magnetmates.app</a>
+        <a href="https://apps.apple.com/us/app/magnet-mates/id6762104011" target="_blank" rel="noopener">Magnet Mates on the App Store</a>
+      </p>
+    </div>
+  </section>
+
+  <section id="shipped">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Shipped</p>
+        <h2>Everything here is live and can be downloaded today.</h2>
+      </div>
+      <ul class="shelf">
+        <li><a href="index.html"><span class="name">Pawn Boss</span><span class="what">A pawn shop game. Haggle, test the gold, grow the shop.</span><span class="where">Meta Quest</span></a></li>
+        <li><a href="https://apps.apple.com/us/app/magnet-mates/id6762104011" target="_blank" rel="noopener"><span class="name">Magnet Mates</span><span class="what">Custom photo magnets, ordered and tracked in the app.</span><span class="where">App Store · web</span></a></li>
+        <li><a href="https://apps.apple.com/us/app/outroute-fantasy-football-ai/id6791827875" target="_blank" rel="noopener"><span class="name">OutRoute: Fantasy Football AI</span><span class="what">Live draft sync and waiver bids.</span><span class="where">App Store</span></a></li>
+        <li><a href="https://apps.apple.com/us/app/wordwake-learn-languages/id6768169341" target="_blank" rel="noopener"><span class="name">WordWake: Learn Languages</span><span class="what">Language learning in ten languages.</span><span class="where">App Store</span></a></li>
+        <li><a href="https://apps.apple.com/us/app/part-107-in-7-days/id6803753669" target="_blank" rel="noopener"><span class="name">Part 107 in 7 Days</span><span class="what">Drone exam prep on real charts.</span><span class="where">App Store</span></a></li>
+        <li><a href="https://apps.apple.com/us/app/food-handler-101/id6807117478" target="_blank" rel="noopener"><span class="name">Food Handler 101</span><span class="what">Food safety exam prep.</span><span class="where">App Store</span></a></li>
+        <li><a href="https://apps.apple.com/us/app/faa-a-p-mechanic-exam-prep/id6809077687" target="_blank" rel="noopener"><span class="name">FAA A&amp;P Mechanic Exam Prep</span><span class="what">General, Airframe and Powerplant.</span><span class="where">App Store</span></a></li>
+        <li><a href="https://apps.apple.com/us/app/nail-tech-theory-exam-prep/id6810893204" target="_blank" rel="noopener"><span class="name">Nail Tech Theory Exam Prep</span><span class="what">State board study and practice.</span><span class="where">App Store</span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="trades" style="padding-top:0">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Where I've worked</p>
+        <h2>I've stood on the owner's side of the counter.</h2>
+        <p>Most of my working life has been in small service businesses, not in software.</p>
+      </div>
+      <ul class="trades">
+        <li><h3>Kitchens</h3><p>Culinary arts at Johnson &amp; Wales, 2008.</p></li>
+        <li><h3>Massage and wellness</h3><p>Licensed massage therapist and lead therapist at a Charlotte practice.</p></li>
+        <li><h3>Teaching</h3><p>Taught the anatomy and physiology curriculum at Maiden School of Massage, 2014 to 2016.</p></li>
+        <li><h3>Gyms</h3><p>CrossFit coach, 2018 to 2020, and wrote a six-week onboarding program for beginners. I still coach powerlifters, including Special Olympics athletes.</p></li>
+        <li><h3>Real estate</h3><p>North Carolina real estate license.</p></li>
+        <li><h3>Retail and online orders</h3><p>Magnet Mates, above.</p></li>
+        <li><h3>Drones</h3><p>FAA Part 107 remote pilot certificate.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Working with a local business</p>
+        <h2>One job, built in the room, left in your hands.</h2>
+      </div>
+      <ol class="steps">
+        <li><span class="n">01</span><h3>Start with your week</h3><p>You pick the job that eats the most time: quotes, inventory, scheduling, follow-ups. I listen and watch how it gets done now.</p></li>
+        <li><span class="n">02</span><h3>Build it together</h3><p>We build the fix in person, on the computer and the software the business already uses.</p></li>
+        <li><span class="n">03</span><h3>You make the next change</h3><p>Before I leave, you change it yourself once, so it keeps working when I'm not there.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap ticket-row">
+      <div class="head" style="margin-bottom:0">
+        <p class="eyebrow">Get in touch</p>
+        <h2>In Charlotte and glad to come to you.</h2>
+        <p>Email is the fastest way to reach me.</p>
+      </div>
+      <div class="ticket" role="group" aria-label="Contact">
+        <div class="t-top"><span>Magnet Mates LLC</span><span>Charlotte, NC</span></div>
+        <p class="t-title">Matt Arnold</p>
+        <p class="t-sub">Software for small businesses</p>
+        <div class="t-rows">
+          <div class="t-row"><span>Email</span><span><a href="mailto:hello@magnetmates.app">hello@magnetmates.app</a></span></div>
+          <div class="t-row"><span>Store</span><span><a href="https://magnetmates.app" target="_blank" rel="noopener">magnetmates.app</a></span></div>
+          <div class="t-row"><span>Game</span><span><a href="index.html">pawnbossgame.com</a></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Magnet Mates LLC, Charlotte, North Carolina.</span>
+    <a href="index.html">Pawn Boss</a>
+    <a href="support.html">Support</a>
+    <a href="privacy.html">Privacy policy</a>
+  </div>
+</footer>
+
+</body>
+</html>
